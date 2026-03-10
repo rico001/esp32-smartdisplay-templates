@@ -1,4 +1,20 @@
-# LVGL drivers for Chinese Sunton Smart display boards, aka CYD (Cheap Yellow Display)
+# ESP32 SmartDisplay Templates
+
+This repository contains template and setup projects for various ESP32 display modules (Sunton "Cheap Yellow Display" boards). Each template under [`templates/`](templates/) is a standalone PlatformIO project based on the [esp32-smartdisplay](https://github.com/rzeldent/esp32-smartdisplay) library.
+
+## Available Templates
+
+| Template | Board | Image | Description |
+| --- | --- | --- | --- |
+| [`smartdisplay-4848S040CI-demo`](templates/smartdisplay-4848S040CI-demo/) | ESP32-4848S040CI | <img src="templates/smartdisplay-4848S040CI-demo/docs/device.png" width="150"> | Demo project for the 4.0" 480x480 display |
+
+---
+
+# esp32-smartdisplay Library (Reference Documentation)
+
+The following sections describe the underlying [esp32-smartdisplay](https://github.com/rzeldent/esp32-smartdisplay) library on which all templates are based.
+
+## LVGL drivers for Chinese Sunton Smart display boards, aka CYD (Cheap Yellow Display)
 
 [![Platform IO CI](https://github.com/rzeldent/esp32-smartdisplay/actions/workflows/main.yml/badge.svg)](https://github.com/rzeldent/esp32-smartdisplay/actions/workflows/main.yml)
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/rzeldent/library/esp32_smartdisplay.svg)](https://registry.platformio.org/libraries/rzeldent/esp32_smartdisplay)
