@@ -23,7 +23,7 @@ Nach dem Export aus SquareLine Studio liegen die generierten Dateien in `SquareL
 1. **Dateien kopieren** — Alle `.c`- und `.h`-Dateien aus `SquareLine_Project/` nach `src/ui/`:
 
    ```bash
-   cp squareline-editor-test/SquareLine_Project/*.c squareline-editor-test/SquareLine_Project/*.h src/ui/
+   cp squareline-editor-setup/SquareLine_Project/*.c squareline-editor-setup/SquareLine_Project/*.h src/ui/
    ```
 
 2. **main.cpp** — Muss nur `ui_init()` aufrufen:
