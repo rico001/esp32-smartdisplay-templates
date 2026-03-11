@@ -23,9 +23,10 @@
  *=========================*/
 
 /*1: use custom malloc/free, 0: use the built-in `lv_mem_alloc()` and `lv_mem_free()`*/
-#define LV_USE_STDLIB_MALLOC    LV_STDLIB_BUILTIN
+#define LV_USE_STDLIB_MALLOC    LV_STDLIB_CLIB
 
 /*Size of the memory available for `lv_malloc()` in bytes (>= 2kB)*/
+/*Ignoriert bei LV_STDLIB_CLIB — LVGL nutzt system malloc (PSRAM-faehig)*/
 #define LV_MEM_SIZE (128U * 1024U)         /*[bytes]*/
 
 /*Size of the memory expand for `lv_malloc()` in bytes*/
@@ -200,11 +201,13 @@
 /*==================
  * LIBS
  *================*/
+#define LV_USE_FS_MEMFS        1
+#define LV_FS_MEMFS_LETTER     'M'
 #define LV_USE_FS_LITTLEFS 0
 #define LV_USE_LODEPNG 0
 #define LV_USE_LIBPNG 0
 #define LV_USE_BMP 0
-#define LV_USE_TJPGD 0
+#define LV_USE_TJPGD 1
 #define LV_USE_LIBJPEG_TURBO 0
 #define LV_USE_GIF 0
 #define LV_BIN_DECODER_RAM_LOAD 0

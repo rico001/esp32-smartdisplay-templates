@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <esp32_smartdisplay.h>
 #include "wifi_screen.h"
+#include "image_screen_from_inet.h"
 
 // --- Globals ---
 static lv_obj_t *tileview;
@@ -402,7 +403,8 @@ void setup()
     lv_obj_t *tile2 = lv_tileview_add_tile(tileview, 2, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
     lv_obj_t *tile3 = lv_tileview_add_tile(tileview, 3, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
     lv_obj_t *tile4 = lv_tileview_add_tile(tileview, 4, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
-    lv_obj_t *tile5 = lv_tileview_add_tile(tileview, 5, 0, (lv_dir_t)LV_DIR_LEFT);
+    lv_obj_t *tile5 = lv_tileview_add_tile(tileview, 5, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
+    lv_obj_t *tile6 = lv_tileview_add_tile(tileview, 6, 0, (lv_dir_t)LV_DIR_LEFT);
 
     wifi_screen_create(tile0);
     create_screen_showcase0(tile1);
@@ -410,6 +412,7 @@ void setup()
     create_screen_showcase2(tile3);
     create_screen_showcase3(tile4);
     create_screen_showcase4(tile5);
+    image_screen_from_inet_create(tile6);
 }
 
 void loop()
