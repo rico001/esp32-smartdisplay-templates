@@ -1,18 +1,19 @@
 # ESP32 SmartDisplay Templates
 
-This repository contains template and setup projects for various ESP32 display modules (Sunton "Cheap Yellow Display" boards). Each template under [`templates/`](templates/) is a standalone PlatformIO project based on the [esp32-smartdisplay](https://github.com/rzeldent/esp32-smartdisplay) library.
+This repository contains template and setup projects for various ESP32 display modules. Each template under [`templates/`](templates/) is a standalone PlatformIO project.
 
 ## Available Templates
 
 | Template | Board | Image | Description |
 | --- | --- | --- | --- |
-| [`smartdisplay-4848S040CI-demo`](templates/smartdisplay-4848S040CI-demo/) | ESP32-4848S040CI | <img src="templates/smartdisplay-4848S040CI-demo/docs/device.png" width="150"> | Demo project for the 4.0" 480x480 display |
+| [`smartdisplay-4848S040CI-demo`](templates/smartdisplay-4848S040CI-demo/) | Sunton ESP32-4848S040CI | <img src="templates/smartdisplay-4848S040CI-demo/docs/device.png" width="150"> | 4.0" 480x480 Display, basierend auf [esp32-smartdisplay](https://github.com/rzeldent/esp32-smartdisplay) |
+| [`guition-JC3248W535C_I_Y-demo`](templates/guition-JC3248W535C_I_Y-demo/) | Guition JC3248W535C_I_Y | <img src="templates/guition-JC3248W535C_I_Y-demo/docs/device.png" width="150"> | 3.5" 480x320 Display (QSPI), basierend auf [Arduino_GFX](https://github.com/moononournation/Arduino_GFX) |
 
 ---
 
 # esp32-smartdisplay Library (Reference Documentation)
 
-The following sections describe the underlying [esp32-smartdisplay](https://github.com/rzeldent/esp32-smartdisplay) library on which all templates are based.
+Die folgenden Abschnitte dokumentieren die [esp32-smartdisplay](https://github.com/rzeldent/esp32-smartdisplay) Library. Diese wird im Sunton-Template verwendet. Boards die von dieser Library nicht unterstuetzt werden (z.B. QSPI-Displays) nutzen alternative Treiber — siehe jeweilige Template-README.
 
 ## LVGL drivers for Chinese Sunton Smart display boards, aka CYD (Cheap Yellow Display)
 
