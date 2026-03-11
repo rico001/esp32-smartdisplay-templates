@@ -391,6 +391,7 @@ void setup()
 {
     Serial.begin(115200);
     smartdisplay_init();
+    smartdisplay_lcd_set_backlight(1.0f);
 
     tileview = lv_tileview_create(lv_screen_active());
     lv_obj_set_size(tileview, 480, 480);
