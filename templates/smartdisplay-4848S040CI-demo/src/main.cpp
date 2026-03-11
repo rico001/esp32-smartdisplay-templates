@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <esp32_smartdisplay.h>
+#include "wifi_screen.h"
 
 // --- Globals ---
 static lv_obj_t *tileview;
@@ -396,12 +397,14 @@ void setup()
     tileview = lv_tileview_create(lv_screen_active());
     lv_obj_set_size(tileview, 480, 480);
 
-    lv_obj_t *tile1 = lv_tileview_add_tile(tileview, 0, 0, (lv_dir_t)LV_DIR_RIGHT);
-    lv_obj_t *tile2 = lv_tileview_add_tile(tileview, 1, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
-    lv_obj_t *tile3 = lv_tileview_add_tile(tileview, 2, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
-    lv_obj_t *tile4 = lv_tileview_add_tile(tileview, 3, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
-    lv_obj_t *tile5 = lv_tileview_add_tile(tileview, 4, 0, (lv_dir_t)LV_DIR_LEFT);
+    lv_obj_t *tile0 = lv_tileview_add_tile(tileview, 0, 0, (lv_dir_t)LV_DIR_RIGHT);
+    lv_obj_t *tile1 = lv_tileview_add_tile(tileview, 1, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
+    lv_obj_t *tile2 = lv_tileview_add_tile(tileview, 2, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
+    lv_obj_t *tile3 = lv_tileview_add_tile(tileview, 3, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
+    lv_obj_t *tile4 = lv_tileview_add_tile(tileview, 4, 0, (lv_dir_t)(LV_DIR_LEFT | LV_DIR_RIGHT));
+    lv_obj_t *tile5 = lv_tileview_add_tile(tileview, 5, 0, (lv_dir_t)LV_DIR_LEFT);
 
+    wifi_screen_create(tile0);
     create_screen_showcase0(tile1);
     create_screen_showcase1(tile2);
     create_screen_showcase2(tile3);
