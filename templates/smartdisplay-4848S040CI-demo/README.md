@@ -146,6 +146,13 @@ pio boards | grep 4848
 
 # Installierte Libraries anzeigen
 pio pkg list
+
+# monitor 
+pio device monitor --raw
+
+# push & monitor
+pio run --target upload && pio device monitor --raw
+
 ```
 
 ### Backup-Firmware wiederherstellen
